@@ -13,3 +13,9 @@ export interface AnswerVideoMessage {
   video: InputFile;
   videoParams: VideoParams;
 }
+
+export interface OnlyVideoMessage {
+    video: InputFile
+    pathToInput: string;
+    pathToOutput: string;
+}
