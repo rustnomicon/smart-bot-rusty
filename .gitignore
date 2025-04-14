@@ -28,3 +28,5 @@ bot.log
 .idea
 .vscode
 .vim
+
+node_modules
