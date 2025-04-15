@@ -48,6 +48,7 @@ export async function handleVideoConvert(
     // Получаем аргументы из подписи к видео
     const caption = ctx.message.caption || "";
     const convertFormat = caption.split(" ").filter((tag: string) => tag !== "/convert")[0] || "mp4";
+    console.log("Формат для конвератции:", convertFormat)
     const outputPath = `temp/output-${username}.${convertFormat}`;
     const proc = Bun.spawn(["ffmpeg", "-y", "-i", inputPath, outputPath], {
       stdout: "pipe",
